@@ -106,7 +106,6 @@ public class StudentApp {
             System.out.println("Invalid CGPA! Must be between 0 and 10.");
             return;
         }
-
         students.add(new Student(id, name, cgpa));
         System.out.println("Student added successfully!");
     }
@@ -124,7 +123,6 @@ public class StudentApp {
         System.out.print("Enter Student ID: ");
         int id = sc.nextInt();
         boolean found = false;
-
         for (Student s : students) {
             if (s.getId() == id) {
                 System.out.println("ID: " + s.getId());
@@ -134,7 +132,6 @@ public class StudentApp {
                 break;
             }
         }
-
         if (!found)
             System.out.println("Student not found.");
     }
@@ -162,11 +159,9 @@ public class StudentApp {
             System.out.println("No students found.");
             return;
         }
-
         double total = 0;
         for (Student s : students) total += s.getCGPA();
         double avg = total / students.size();
-
         System.out.printf("Average CGPA: %.2f%n", avg);
     }
 }
